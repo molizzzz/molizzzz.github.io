@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>家乡 · 我的个人主页</title>
+  <meta name="description" content="我的家乡介绍：地理位置、风土人情、特色美食与相册">
+  <meta name="author" content="朱羽凡">
+
+  <script>
+    (function () {
+      var t = localStorage.getItem('lab1-theme') ||
+              (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/avatar.jpg" type="image/jpeg">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">计网</span>
+        <span>我的个人主页</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="hometown.html">家乡</a></li>
+          <li><a href="study.html">学习</a></li>
+          <li><a href="life.html">生活</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="切换深色模式">🌙</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== 页面横幅 ===== -->
+    <section class="section" style="padding-bottom:0">
+      <div class="container">
+        <img src="images/hometown-banner.jpg" width="1800" height="630"
+             alt="宝鸡市区全景：渭河两岸的城区，背后是连绵的秦岭"
+             style="width:100%;height:auto;border-radius:12px;box-shadow:var(--c-shadow)">
+      </div>
+    </section>
+
+    <!-- ===== 家乡概况 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">家乡概况</h2>
+        <div class="media-row">
+          <div>
+            <p>
+              我的家乡是<strong>陕西省宝鸡市</strong>，地处关中平原西部、渭河中游，
+              南依秦岭、北枕千山，自古就是陕甘宁川四省通衢之地。
+              全市总面积约 <strong>1.81 万</strong>平方公里，常住人口约 <strong>326 万</strong>。
+            </p>
+            <p>
+              宝鸡古称陈仓、雍城，是周秦王朝的发祥之地，也是炎帝故里的所在。
+              《诗经·大雅》里「周虽旧邦，其命维新」的周人，正是从这片渭水之滨走向中原的。
+              这里素有「青铜器之乡」之称——何尊、毛公鼎等重器皆出土于此，
+              何尊铭文中「宅兹中国」四字，是「中国」一词最早的文字记录。
+              城市气质也带着这份厚重的底子：不张扬，但处处有来历。
+              而对生活在这里的人来说，宝鸡的温度其实很具体——
+              是清晨一碗豆花泡馍的热气，也是夏天傍晚渭河边的风。
+            </p>
+            <p>
+              <span class="tag">炎帝故里</span>
+              <span class="tag">青铜器之乡</span>
+              <span class="tag">周秦发祥地</span>
+            </p>
+            <p>
+              <!-- 外部超链接 1、2：方便验收“三个超链接”要求 -->
+              扩展阅读：
+              <a href="https://baike.baidu.com/item/宝鸡" target="_blank" rel="noopener">百度百科 · 宝鸡</a>
+              ·
+              <a href="https://zh.wikipedia.org/wiki/宝鸡市" target="_blank" rel="noopener">维基百科 · 宝鸡市</a>
+            </p>
+            <p>
+              🎬 想更直观地看看这里，推荐一个视频：
+              <a href="https://www.bilibili.com/video/BV1aaoQBrEui/" target="_blank" rel="noopener">Vlog｜中国宝藏城市——陕西宝鸡！</a>
+            </p>
+          </div>
+          <img src="images/hometown-1.jpg" alt="家乡的城市地标：传统亭台与现代高楼同框" width="800" height="600">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 相册（图片元素，实验必做项） ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">家乡相册</h2>
+        <div class="gallery">
+          <figure>
+            <img src="images/hometown-2.jpg" alt="太白山：秦岭主峰，海拔 3771.2 米" width="1280" height="960">
+            <figcaption>太白山 · 秦岭主峰，盛夏也要穿外套（我已两次登顶)</figcaption>
+          </figure>
+          <figure>
+            <img src="images/hometown-3.jpg" alt="法门寺：位于扶风县，供奉佛指舍利" width="1280" height="960">
+            <figcaption>法门寺 · 扶风县，佛指舍利所在，千年古刹</figcaption>
+          </figure>
+          <figure>
+            <img src="images/hometown-4.jpg" alt="何尊：宝鸡青铜器博物院藏，铭文中有最早的“中国”二字" width="600" height="450">
+            <figcaption>青铜器博物院 · 何尊就住在这里，真品哦，可不是仿品</figcaption>
+          </figure>
+          <figure>
+            <img src="images/hometown-5.jpg" alt="石鼓阁：位于中华石鼓园，与青铜器博物院相邻" width="1280" height="960">
+            <figcaption>石鼓阁 · 中华石鼓园，渭河边</figcaption>
+          </figure>
+        </div>
+        <!-- 图片来源标注：既是实验要求的外部链接，也是 CC 授权要求的署名 -->
+        <p class="img-credit">
+          相册照片来自 Wikimedia Commons，均为自由许可（CC0 / CC BY-SA）：
+          <a href="https://commons.wikimedia.org/wiki/File:Mountain_Taibai_No.1.jpg" target="_blank" rel="noopener">太白山</a> ·
+          <a href="https://commons.wikimedia.org/wiki/File:Famen_Temple_Pagoda_(9911096775).jpg" target="_blank" rel="noopener">法门寺</a> ·
+          <a href="https://commons.wikimedia.org/wiki/File:He_Zun.jpg" target="_blank" rel="noopener">何尊</a> ·
+          <a href="https://commons.wikimedia.org/wiki/File:Pagoda_Next_to_Baoji_Bronze_Museum.jpg" target="_blank" rel="noopener">石鼓阁</a> ·
+          <a href="https://commons.wikimedia.org/wiki/File:Baoji.jpg" target="_blank" rel="noopener">宝鸡市区</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 特色美食表格 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">特色美食</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>表 1&nbsp;&nbsp;家乡特色美食一览</caption>
+            <thead>
+              <tr>
+                <th scope="col">名称</th>
+                <th scope="col">类型</th>
+                <th scope="col">简介</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>擀面皮</td><td>主食</td><td>面皮筋道透亮，浇上油泼辣子、香醋和蒜水，酸辣开胃。夏天蹲在街边吃一碗，比什么都解暑。</td></tr>
+              <tr><td>肉夹馍</td><td>小吃</td><td>西府的做法用锅盔夹腊汁肉，饼皮厚实酥脆，腊汁肉炖得酥烂、肥而不腻，咬一口直掉渣。</td></tr>
+              <tr><td>甑糕</td><td>甜品</td><td>糯米与红枣层层相叠，用甑慢蒸数小时，米枣交融、软糯香甜。关中人过年桌上少不了它。</td></tr>
+              <tr><td>岐山臊子面</td><td>汤羹</td><td>讲究「薄筋光、煎稀汪」：面薄而筋、汤滚烫、油花汪。酸辣鲜香，是宝鸡红白喜事的标配。（但我是扶风人，所以从扶风臊子面说起）</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 民俗风情 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">民俗风情</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="card-icon">🏮</div>
+            <h3>传统节庆</h3>
+            <p>正月里的<b>西府社火</b>是最热闹的。陇县、凤翔一带的社火队走街串巷，
+              高芯社火把小孩扮成戏文人物架在几米高的铁芯上，锣鼓一响，半条街都挤满了人。</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎭</div>
+            <h3>地方戏曲</h3>
+            <p>宝鸡是<b>秦腔</b>的重要流行地。秦腔不叫「唱」叫「吼」，高亢激越，
+              田埂上、广场边常能听见。庙会上的常客，秦腔吼的叫乡愁，想看一段可以搜
+              <a href="https://search.bilibili.com/all?keyword=秦腔" target="_blank" rel="noopener">B 站秦腔视频</a>
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🏛️</div>
+            <h3>名胜古迹</h3>
+            <p>除了相册里的太白山和法门寺，市区还有<b>中华石鼓园</b>和<b>金台观</b>，
+              都在渭河边，散步就能到。要去周边县区的话，可以
+              <a href="https://map.baidu.com/search/宝鸡" target="_blank" rel="noopener">在地图上查路线</a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <blockquote>
+          <p>「明修栈道，暗度陈仓」——陈仓就是宝鸡的古称。
+            小时候只当它是一句成语，后来才慢慢懂得，
+            那是我每次回家都要走的那条路。</p>
+        </blockquote>
+        <p><a class="btn" href="index.html">← 返回首页</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p style="margin:0 0 .5rem">© <span class="js-year">2026</span> 朱羽凡 · 中国科学技术大学 · 计算机网络实验一</p>
+        <span class="http-badge">正在检测协议版本…</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener">科大主页</a></li>
+        <li><a href="https://github.com/molizzzz" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:zyf240573@mail.ustc.edu.cn">联系我</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="返回顶部">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

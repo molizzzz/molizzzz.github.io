@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页 · 我的个人主页</title>
+  <meta name="description" content="计算机网络实验一 · 静态网页制作 · 个人主页">
+  <meta name="author" content="朱羽凡">
+
+  <!-- 提前应用主题，避免页面闪烁（FOUC） -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('lab1-theme') ||
+              (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/avatar.jpg" type="image/jpeg">
+</head>
+<body class="has-hero">
+
+  <!-- ===== 页头 / 导航栏（每个页面保持一致，当前页由 js 自动高亮） ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">计网</span>
+        <span>我的个人主页</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="hometown.html">家乡</a></li>
+          <li><a href="study.html">学习</a></li>
+          <li><a href="life.html">生活</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="切换深色模式">🌙</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== 全屏封面：整屏照片 + 居中文字，鼠标下滑才进入正文 ===== -->
+    <section class="hero-full">
+      <!-- 全屏封面照片：由 images/bigbackground.jpg 裁切而成（已裁掉右下角误入的手指） -->
+      <img class="hero-full-img" src="images/hero.jpg" alt="黄昏时分的湖面与晚霞" width="1920" height="1080">
+      <div class="hero-full-overlay" aria-hidden="true"></div>
+
+      <div class="hero-full-content">
+        <p class="hero-eyebrow">中国科学技术大学 · 计算机科学与技术</p>
+        <h1 class="hero-full-title">朱羽凡</h1>
+        <p class="hero-full-sub">ustc cs 24级 瓦罗兰特低手 健身新人 地板流球手</p>
+        <p class="hero-full-actions">
+          <a class="btn" href="#about">进入主页</a>
+          <a class="btn btn-ghost" href="hometown.html">我的家乡</a>
+        </p>
+      </div>
+
+      <!-- 向下滚动提示，点击可跳到正文 -->
+      <a class="scroll-hint" href="#about">
+        <span>向下滚动</span>
+        <span class="scroll-hint-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- ===== 关于我：三张卡片 ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">关于我</h2>
+
+        <div class="about-intro">
+          <img src="images/avatar.jpg" alt="我的头像" width="92" height="92">
+          <div>
+            <p class="about-greeting">你好，我是朱羽凡（zhiyu）</p>
+            <p>欢迎来到我的个人主页！这里记录了我的家乡、学习与生活。本站是《计算机网络》实验一的作业成果，使用纯 HTML + CSS + JavaScript 手工编写，托管在 GitHub Pages 上。</p>
+          </div>
+        </div>
+
+        <div class="grid">
+
+          <article class="card">
+            <div class="card-icon">🎓</div>
+            <h3>教育背景</h3>
+            <p>高中学历勇闯大学，中科大计算机大三在读</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💡</div>
+            <h3>兴趣爱好</h3>
+            <p>爱音乐，jj的歌迷朋友<br>爱美食，每周末探索合肥<br>爱健身，练三休一之人，极限卧推50kg<br>爱篮球，22年起鸽鸽球迷，let's go,warriors</p>
+            <p>
+              <span class="tag">篮球</span>
+              <span class="tag">健身</span>
+              <span class="tag">探索</span>
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 基本信息表格（实验要求：使用表格元素） ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">基本信息</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>表 1&nbsp;&nbsp;个人基本信息表</caption>
+            <tbody>
+              <tr><th scope="row">姓名</th>          <td>朱羽凡</td></tr>
+              <tr><th scope="row">学号</th>          <td>PB24111596</td></tr>
+              <tr><th scope="row">院系专业</th>      <td>计算机科学与技术</td></tr>
+              <tr><th scope="row">年级</th>          <td>24级</td></tr>
+              <tr><th scope="row">家乡</th>          <td><a href="hometown.html">陕西省宝鸡市</a></td></tr>
+              <tr><th scope="row">电子邮箱</th>      <td><a href="mailto:zyf240573@mail.ustc.edu.cn">zyf240573@mail.ustc.edu.cn</a></td></tr>
+              <tr><th scope="row">GitHub</th>        <td><a href="https://github.com/molizzzz" target="_blank" rel="noopener">github.com/molizzzz</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 站点导航：三个子页面超链接（实验要求：三个超链接 + 图片） ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">浏览本站</h2>
+        <div class="grid">
+
+          <article class="card">
+            <img src="images/hometown-1.jpg" alt="家乡风光" width="800" height="600" style="border-radius:8px;margin-bottom:.9rem">
+            <h3><a href="hometown.html">我的家乡 →</a></h3>
+            <p>陕西宝鸡——八百里秦川，关中平原，沃野千里，周秦汉唐故地，中华龙脉</p>
+          </article>
+
+          <article class="card">
+            <img src="images/study-1.jpg" alt="学习分享" width="800" height="600" style="border-radius:8px;margin-bottom:.9rem">
+            <h3><a href="study.html">学习分享 →</a></h3>
+            <p>ustc 24cs潜水摸鱼大师</p>
+          </article>
+
+          <article class="card">
+            <img src="images/life-1.jpg" alt="生活随拍" width="800" height="600" style="border-radius:8px;margin-bottom:.9rem">
+            <h3><a href="life.html">生活随拍 →</a></h3>
+            <p>最热爱音乐，美食，小动物之人</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 最新动态时间线 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">最新动态</h2>
+        <ul class="timeline">
+          <li>
+            <time datetime="2026-09-26">2026-09-26</time>
+            <strong>搭建了个人主页</strong>
+            <p>完成《计算机网络》实验一：静态网页制作，并把站点部署到 GitHub Pages。</p>
+          </li>
+          <li>
+            <time datetime="2026-09-09">2026-09-09</time>
+            <strong>新学期第一次班会</strong>
+            <p>成功当选班委，爽</p>
+          </li>
+          <li>
+            <time datetime="2026-08-31">2026-08-31</time>
+            <strong>26秋学期开始了。。。</strong>
+            <p>开学第一天晚上夜爬大蜀山</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 页脚（每个页面保持一致） ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p style="margin:0 0 .5rem">© <span class="js-year">2026</span> 朱羽凡 · 中国科学技术大学 · 计算机网络实验一</p>
+        <!-- 由 js/main.js 自动填入真实协议版本 -->
+        <span class="http-badge">正在检测协议版本…</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener">科大主页</a></li>
+        <li><a href="https://github.com/molizzzz" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:zyf240573@mail.ustc.edu.cn">联系我</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="返回顶部">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

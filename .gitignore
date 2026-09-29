@@ -1,0 +1,12 @@
+# 本地预览脚本：部署后没用，不必进仓库
+启动预览.bat
+
+# 手机原图备份：体积大，页面用不到（已裁切压缩后放进 images/）
+原图备份/
+
+# 系统 / 编辑器杂项
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学习分享 · 我的个人主页</title>
+  <meta name="description" content="课程学习笔记、资源整理与专业方向分享">
+  <meta name="author" content="朱羽凡">
+
+  <script>
+    (function () {
+      var t = localStorage.getItem('lab1-theme') ||
+              (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/avatar.jpg" type="image/jpeg">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">计网</span>
+        <span>我的个人主页</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="hometown.html">家乡</a></li>
+          <li><a href="study.html">学习</a></li>
+          <li><a href="life.html">生活</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="切换深色模式">🌙</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">学习分享</h2>
+        <p>
+          都大三了怎么还这么多课啊，我要卷g，哎，好喜欢科大的大绩点啊
+        </p>
+        <p>
+          每天喝咖啡勉强活着
+        </p>
+        <div class="media-row">
+          <img src="images/study-1.jpg" alt="自习室落地窗外的城市天际线" width="800" height="600">
+          <div>
+            <h3>本学期的重点课程</h3>
+            <ul>
+              <li><strong>计算机网络</strong>——自顶向下地讲协议栈，正好给这门实验课打底。</li>
+              <li><strong>编译原理和技术</strong>——从正则到语法分析，第一次觉得「写编译器」没那么玄。</li>
+              <li><strong>算法基础</strong>——分治、贪心、动态规划，证明比写代码难。</li>
+              <li><strong>随机过程 B</strong>——概率论的续集，马尔可夫链是重点。</li>
+            </ul>
+            <p>
+              <span class="tag">计算机网络</span>
+              <span class="tag">编译原理</span>
+              <span class="tag">算法基础</span>
+              <span class="tag">随机过程 B</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 课程表（表格元素） ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">我的课程表</h2>
+        <div class="table-wrap">
+          <table class="study-table">
+            <caption>表 1&nbsp;&nbsp;2026 年秋季学期课程表</caption>
+            <thead>
+              <tr>
+                <th scope="col">时段</th>
+                <th scope="col">周一</th>
+                <th scope="col">周二</th>
+                <th scope="col">周三</th>
+                <th scope="col">周四</th>
+                <th scope="col">周五</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1–2 节<br><small>07:50–09:25</small></th>
+                <td>—</td>
+                <td>计算机网络<br><small>张信明 · GH-206</small></td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <th scope="row">3–4 节<br><small>09:45–11:20</small></th>
+                <td>—</td>
+                <td>—</td>
+                <td>编译原理和技术<br><small>李诚、徐伟 · GT-B112</small></td>
+                <td>计算机网络<br><small>张信明 · GH-206</small></td>
+                <td>算法基础<br><small>李向阳 · GT-B212</small></td>
+              </tr>
+              <tr>
+                <th scope="row">3–5 节<br><small>09:45–12:10</small></th>
+                <td>—</td>
+                <td>数据隐私的方法伦理和实践<br><small>张兰 · GT-B212</small></td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <th scope="row">6–7 节<br><small>14:00–15:35</small></th>
+                <td>编译原理和技术<br><small>李诚、徐伟 · GT-B112</small></td>
+                <td>—</td>
+                <td>算法基础<br><small>李向阳 · GT-B212</small></td>
+                <td>大学生情绪管理<br><small>徐晓飞 · 3A212</small></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <th scope="row">8–10 节<br><small>15:55 起</small></th>
+                <td>Web 信息处理与应用<br><small>徐童 · GT-B112</small></td>
+                <td>智能计算软件优化<br><small>田晗 · GT-B112</small></td>
+                <td>—</td>
+                <td>随机过程 B<br><small>解扬洋 · GT-B110</small></td>
+                <td>免疫系统与人体健康<br><small>彭慧 · 3A205</small></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 学习资源（外部超链接） ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">学习资源</h2>
+        <div class="grid">
+
+          <article class="card">
+            <div class="card-icon">📚</div>
+            <h3>课程与文档</h3>
+            <ul>
+              <li><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">MDN Web 开发文档</a></li>
+              <li><a href="https://www.w3school.com.cn/" target="_blank" rel="noopener">W3School 在线教程</a></li>
+              <li><a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener">中国科学技术大学</a></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💻</div>
+            <h3>编程练习</h3>
+            <ul>
+              <li><a href="https://leetcode.cn/" target="_blank" rel="noopener">LeetCode 力扣</a></li>
+              <li><a href="https://github.com/molizzzz" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://www.luogu.com.cn/" target="_blank" rel="noopener">洛谷</a></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🌐</div>
+            <h3>技术规范（本次实验相关）</h3>
+            <ul>
+              <li><a href="https://www.rfc-editor.org/rfc/rfc9110.html" target="_blank" rel="noopener">RFC 9110 · HTTP 语义</a></li>
+              <li><a href="https://www.rfc-editor.org/rfc/rfc9113.html" target="_blank" rel="noopener">RFC 9113 · HTTP/2</a></li>
+              <li><a href="https://www.rfc-editor.org/rfc/rfc9114.html" target="_blank" rel="noopener">RFC 9114 · HTTP/3</a></li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 学习历程时间线 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">学习历程</h2>
+        <ul class="timeline">
+          <li>
+            <time datetime="2026-09">2026 年 9 月</time>
+            <strong>计算机网络实验一</strong>
+            <p>学习 HTML / CSS 基础，动手制作个人静态网页，并部署到 GitHub Pages。</p>
+          </li>
+          <li>
+            <time datetime="2026-09">2026 年 9 月</time>
+            <strong>新学期</strong>
+            <p>开始计网，编译，算法学习</p>
+          </li>
+          <li>
+            <time datetime="2026-07">2026 年 7 月</time>
+            <strong>暑假</strong>
+            <p>107杯校赛摸鱼爽混三等奖</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 学习心得 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">学习心得</h2>
+        <blockquote>
+          <p>在科大，活着就好</p>
+        </blockquote>
+        <p><a class="btn" href="index.html">← 返回首页</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p style="margin:0 0 .5rem">© <span class="js-year">2026</span> 朱羽凡 · 中国科学技术大学 · 计算机网络实验一</p>
+        <span class="http-badge">正在检测协议版本…</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener">科大主页</a></li>
+        <li><a href="https://github.com/molizzzz" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:zyf240573@mail.ustc.edu.cn">联系我</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="返回顶部">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
